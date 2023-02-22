@@ -18,7 +18,7 @@ in this module.
 
 ## Task #1 - `Concert` class
 
-The `Concert` class encapsulates data about the
+The `Concert` class encapsulates data about the 
 artist performing at a music concert, the number of tickets
 available for purchase, and the number of people on the wait list.
 
@@ -75,11 +75,11 @@ Run the Junit tests to ensure the code passes the tests.
 Once you have that working, edit the `Concert` class to add the following methods:
 
 - A method named `purchaseTicket()` that takes no parameters and returns a `boolean`.
-    - If the number of available tickets is positive, decrement the number
-      of available tickets by 1 and return `true`.  Return `false` if there are
-      no tickets available.
+  - If the number of available tickets is positive, decrement the number
+    of available tickets by 1 and return `true`.  Return `false` if there are
+    no tickets available.
 - A method named `addtoWaitList()` that takes no parameters and does not return a value.
-    - Increment the `waitlist` value by 1.
+  - Increment the `waitlist` value by 1.
 
 Edit the `ConcertTest` Junit test class to add the following test methods.
 
@@ -143,13 +143,13 @@ stores instances of the reference type  `Concert`.
 (3) Generate a getter method for the `currentSize` instance variable named `getCurrentSize`.
 
 (4) Create a method named `add` that takes one parameter and returns a `boolean`.
-The parameter type should be `Concert`.
+The parameter type should be `Concert`.  
 
 - The `currentSize` instance variable represents the number of concerts that have
   been added to the array. Initially this value is 0.
-- If the array is not full (i.e. the current size is less than the array length),
-  add the parameter object into the array using the current size as the index.  Increment
-  the current size and return `true` to indicate the concert was added to the repository.
+- If the array is not full (i.e. `currentSize` is less than the array length),
+  add the parameter object into the array using `currentSize` as the index.  Increment
+  `currentSize` and return `true` to indicate the concert was added to the repository.
 - If the array is already full, simply return `false` to indicate the concert
   could not be added to the repository.
 
@@ -327,19 +327,19 @@ with the user.    This will be handled in two additional classes:
   prompting the user with: "Select an action: a=add concert, d=display all concerts, p=purchase ticket, w=add to waitlist, q=quit:"
 - The `Driver` class will delegate the request to a `ConcertService` object.
 - The `ConcertService` class implements the business logic for the application.
-    - Adding a concert:
-        - Print a success message if the concert is added to the repository.
-        - Print an error message if the repository already contains a concert for that performer.
-        - Print an error message if the repository can't add a concert (array is full).
-    - Display all concerts
-        - Iterate and print each concert in the repository.
-    - Purchase ticket:
-        - Print a success message if the purchase was successful.
-        - Print an error message if the repository does not contain a concert for the specified performer.
-        - Print an error message if the repository contains the concert but the purchase is unsuccessful (no tickets available).
-    - Add to waitlist:
-        - Print a success message if the waitlist update was successful.
-        - Print an error message if the repository does not contain a concert for the specified performer.
+  - Adding a concert:
+    - Print a success message if the concert is added to the repository.
+    - Print an error message if the repository already contains a concert for that performer.
+    - Print an error message if the repository can't add a concert (array is full).
+  - Display all concerts
+    - Iterate and print each concert in the repository.
+  - Purchase ticket:
+    - Print a success message if the purchase was successful.
+    - Print an error message if the repository does not contain a concert for the specified performer.
+    - Print an error message if the repository contains the concert but the purchase is unsuccessful (no tickets available).
+  - Add to waitlist:
+    - Print a success message if the waitlist update was successful.
+    - Print an error message if the repository does not contain a concert for the specified performer.
 
 
 
@@ -359,9 +359,9 @@ private  ConcertRepository repository = new ConcertRepository(3);
 
 (2) Edit the `ConcertService` class to add a method named `addConcert` that takes two
 parameters: the performer name and the number of available tickets.  The method does not return a value.
-- Call the `findByPerformer` method to test if a concert for that performer
+  - Call the `findByPerformer` method to test if a concert for that performer
   exists in the repository, and print "Unable to add concert" if one already does.
-- If there is no existing concert for the performer, create a new concert
+  - If there is no existing concert for the performer, create a new concert
   and call the `add` method to add the concert to the repository.
     - Print "Added concert" if the `add` method returns `true`.
     - Print "Unable to add concert" if the `add` method returns `false`.
@@ -397,7 +397,7 @@ Run the Junit test and confirm your code.
 
 (4) Edit the `ConcertService` class to
 add a method named `displayConcerts` that takes no parameters and returns no value.
-The method should call the repository `get` method to retrieve and print each concert in the repository.
+The method should call the repository `get` method to retrieve and print each concert in the repository.  
 
 (5) Edit `ConcertServiceTest` to add two methods to test the new functionality:
 
@@ -432,8 +432,8 @@ The method does not return a value.
   actual performer name, if there is no such concert.
 - If there is a concert for the performer, call the `purchaseTicket` method on the given concert
   object.  Test the result returned from `purchaseTicket`.
-    - Print "Ticket purchased" if the `purchaseTicket` method returns `true`.
-    - Print "Ticket unavailable" if the `purchaseTicket` method returns `false`.
+  - Print "Ticket purchased" if the `purchaseTicket` method returns `true`.
+  - Print "Ticket unavailable" if the `purchaseTicket` method returns `false`. 
 
 (7) Edit the `ConcertServiceTest` class to add Junit tests:
 
@@ -474,7 +474,7 @@ one parameter, the performer name.  The method does not return a value.
   actual performer name, if there is no such concert.
 - If there is a concert for the performer, call the `addToWaitlist` method on the given concert
   object and then print "Added to waitlist".
-
+ 
 (9) Edit the `ConcertServiceTest` class to add Junit tests:
 
 ```java
