@@ -18,7 +18,7 @@ in this module.
 
 ## Task #1 - `Concert` class
 
-The `Concert` class encapsulates data about the 
+The `Concert` class encapsulates data about the
 artist performing at a music concert, the number of tickets
 available for purchase, and the number of people on the wait list.
 
@@ -143,7 +143,7 @@ stores instances of the reference type  `Concert`.
 (3) Generate a getter method for the `currentSize` instance variable named `getCurrentSize`.
 
 (4) Create a method named `add` that takes one parameter and returns a `boolean`.
-The parameter type should be `Concert`.  
+The parameter type should be `Concert`.
 
 - The `currentSize` instance variable represents the number of concerts that have
   been added to the array. Initially this value is 0.
@@ -192,7 +192,7 @@ class ConcertRepositoryTest {
     }
 
     @Test
-    void addget5() {
+    void addGet5() {
         // repository can hold up to 5 concerts
         ConcertRepository repository = new ConcertRepository(5);
         assertEquals(0, repository.getCurrentSize());
@@ -359,12 +359,12 @@ private  ConcertRepository repository = new ConcertRepository(3);
 
 (2) Edit the `ConcertService` class to add a method named `addConcert` that takes two
 parameters: the performer name and the number of available tickets.  The method does not return a value.
-  - Call the `findByPerformer` method to test if a concert for that performer
+- Call the `findByPerformer` method to test if a concert for that performer
   exists in the repository, and print "Unable to add concert" if one already does.
-  - If there is no existing concert for the performer, create a new concert
+- If there is no existing concert for the performer, create a new concert
   and call the `add` method to add the concert to the repository.
-    - Print "Added concert" if the `add` method returns `true`.
-    - Print "Unable to add concert" if the `add` method returns `false`.
+  - Print "Added concert" if the `add` method returns `true`.
+  - Print "Unable to add concert" if the `add` method returns `false`.
 
 (3) Edit `ConcertServiceTest` to add two methods to test the new functionality:
 
@@ -397,7 +397,7 @@ Run the Junit test and confirm your code.
 
 (4) Edit the `ConcertService` class to
 add a method named `displayConcerts` that takes no parameters and returns no value.
-The method should call the repository `get` method to retrieve and print each concert in the repository.  
+The method should call the repository `get` method to retrieve and print each concert in the repository.
 
 (5) Edit `ConcertServiceTest` to add two methods to test the new functionality:
 
@@ -433,7 +433,7 @@ The method does not return a value.
 - If there is a concert for the performer, call the `purchaseTicket` method on the given concert
   object.  Test the result returned from `purchaseTicket`.
   - Print "Ticket purchased" if the `purchaseTicket` method returns `true`.
-  - Print "Ticket unavailable" if the `purchaseTicket` method returns `false`. 
+  - Print "Ticket unavailable" if the `purchaseTicket` method returns `false`.
 
 (7) Edit the `ConcertServiceTest` class to add Junit tests:
 
@@ -474,7 +474,7 @@ one parameter, the performer name.  The method does not return a value.
   actual performer name, if there is no such concert.
 - If there is a concert for the performer, call the `addToWaitlist` method on the given concert
   object and then print "Added to waitlist".
- 
+
 (9) Edit the `ConcertServiceTest` class to add Junit tests:
 
 ```java
