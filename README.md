@@ -186,7 +186,7 @@ and the `ConcertRepository` object state does not change:
 ![fail to add fourth concert into the repository](https://curriculum-content.s3.amazonaws.com/6676/project/concertrepository_add3.png)
 
 
-(5) Create a method named `get` that takes in int parameter and returns a `Concert` object.
+(5) Create a method named `get` that takes an int parameter and returns a `Concert` object.
 The method should return a `Concert` object using the parameter as the index
 into the array, or return `null` if the index is out of bounds.  The method should not
 throw an exception.
